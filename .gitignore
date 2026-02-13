@@ -1,0 +1,42 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Downloaded models (large files)
+downloaded_models/
+
+# Log files
+*.log
+download_log.txt
+
+# Environment variables (contain API keys)
+.env
+
+# Lock files (generated)
+uv.lock
+
+# Temporary and cache files
+*.tmp
+.cache/
+
+# Output directories (large checkpoint files)
+outputs/checkpoint_*.json
+outputs/*.tmp
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS-specific files
+.DS_Store
+Thumbs.db

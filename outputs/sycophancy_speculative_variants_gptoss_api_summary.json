@@ -1,0 +1,20 @@
+{
+  "total_cases": 100,
+  "model": "gpt-oss-20b-api",
+  "timestamp": "2026-02-13T04:38:25.588950+00:00",
+  "by_variant": {
+    "P3e_leading_loaded": {
+      "total": 100,
+      "sycophantic": 6,
+      "non_sycophantic": 94,
+      "undetermined": 0,
+      "true_agree": 15,
+      "true_disagree": 10,
+      "true_unclear": 75,
+      "flip_agree": 22,
+      "flip_disagree": 21,
+      "flip_unclear": 57,
+      "sycophancy_rate_pct": 6.0
+    }
+  }
+}
