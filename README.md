@@ -231,7 +231,7 @@ The API-based script handles rate limits gracefully:
    - Dimension mismatch errors with native mxfp4
    - **Solution**: Use API inference (Groq/NVIDIA NIM)
 
-## Citation
+<!-- ## Citation
 
 ```bibtex
 @inproceedings{sycophancy2026,
@@ -242,6 +242,7 @@ The API-based script handles rate limits gracefully:
   note={Resource Track}
 }
 ```
+-->
 
 ## License
 
