@@ -1,10 +1,6 @@
-# SycoLex -- Benchmark for Detecting Sycophancy in Legal Case Reasoning
+# SycoLex: LLM as a Sycophantic Judge
 
-**SIGIR 2026 Resource Track Submission**
-
-> Subinay Adhikary\*, Shuvam Banerji Seal\*, Liana Ermakova, Kripabandhu Ghosh, Jaap Kamps
->
-> \*Equal contribution &middot; IISER Kolkata &middot; University of Brest &middot; University of Amsterdam
+**Biases in QA on Legal Case Judgments**
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
@@ -26,7 +22,6 @@
 - [Output Format](#output-format)
 - [FIRE 2026 Shared Task](#fire-2026-shared-task)
 - [License](#license)
-- [Contact](#contact)
 
 ---
 
@@ -132,7 +127,7 @@ Sycophancy_Resource/
 
 ### U.S. Supreme Court Cases (N = 300)
 
-**Source:** [oyez.org](https://www.oyez.org/cases/) (2000--2003)
+**Collected by the authors** from publicly available U.S. Supreme Court documents at [oyez.org](https://www.oyez.org/cases/) using a web crawler (cases from 2000--2003).
 
 | Statistic | Value |
 |:----------|:------|
@@ -170,7 +165,7 @@ Sycophancy_Resource/
 
 ### Indian Supreme Court Cases (N = 1,500)
 
-**Source:** [L-NLProc/Realistic_LJP_Facts](https://huggingface.co/datasets/L-NLProc/Realistic_LJP_Facts) (1947--2020)
+**Compiled and annotated by the authors** from Indian Supreme Court case records spanning 1947--2020. The raw case texts were sourced from publicly available Indian legal databases and categorized into 9 distinct legal domains through a combination of keyword-based classification, LLM-based classification (Claude Opus 4.6), and manual validation by the authors.
 
 | Statistic | Value |
 |:----------|:------|
@@ -197,7 +192,7 @@ Sycophancy_Resource/
 - `label = 1` -- favorable to petitioner (appeal accepted)
 - `label = 0` -- unfavorable (appeal rejected)
 
-Categories were assigned through keyword-based classification, LLM-assisted classification (Claude), and manual validation.
+**Attribution:** Original case texts sourced from Indian legal databases; comprehensive categorization, annotation, and quality validation performed by the authors. A pre-processed version is available at [HuggingFace](https://huggingface.co/datasets/L-NLProc/Realistic_LJP_Facts) for reference.
 
 ---
 
@@ -804,23 +799,28 @@ Target scale: ~600 cases x 6 models x 10 prompt variants = **36,000 predictions*
 
 ## License
 
-- **Code:** MIT License
-- **U.S. Supreme Court data:** Public domain ([oyez.org](https://www.oyez.org/cases/))
-- **Indian Supreme Court data:** [L-NLProc/Realistic_LJP_Facts](https://huggingface.co/datasets/L-NLProc/Realistic_LJP_Facts)
-- **Model outputs:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+This project is released under multiple licenses depending on the component:
 
-The full corpus will be published under CC BY 4.0 following an embargo period ending after the FIRE 2026 shared task.
+### Code and Scripts
+
+**MIT License** - See [LICENSE](LICENSE) file for details.
+
+Copyright (c) 2026 Subinay Adhikary, Shuvam Banerji Seal, Liana Ermakova, Kripabandhu Ghosh, Jaap Kamps
+
+### Datasets
+
+- **U.S. Supreme Court Cases (300 cases):** Collected from publicly available documents at [oyez.org](https://www.oyez.org/cases/). Original court documents are in the public domain. Our structured annotations and categorizations are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+- **Indian Supreme Court Cases (1,500 cases):** Compiled from publicly available Indian legal databases. Case texts are in the public domain. Our categorizations, annotations, quality flags, and structured metadata are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+### Model Outputs and Annotations
+
+**CC BY 4.0** - All LLM responses, sycophancy classifications, and human annotations are released under [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
+### Availability
+
+The full corpus (datasets + model outputs + annotations) will be published under CC BY 4.0 following an embargo period ending after the FIRE 2026 shared task.
 
 ---
-
-## Contact
-
-| Author | Email | Affiliation |
-|:-------|:------|:------------|
-| Subinay Adhikary | sa21rs094@iiserkol.ac.in | IISER Kolkata |
-| Shuvam Banerji Seal | sbs22ms076@iiserkol.ac.in | IISER Kolkata |
-| Liana Ermakova | liana.ermakova@univ-brest.fr | University of Brest |
-| Kripabandhu Ghosh | kripaghosh@iiserkol.ac.in | IISER Kolkata |
-| Jaap Kamps | kamps@uva.nl | University of Amsterdam |
 
 For questions or issues, please open a [GitHub issue](https://github.com/subinay494/Sycophancy_Resource/issues).
